@@ -1,12 +1,10 @@
 <template>
-  <div class="swiperContainer">
-    <div class="swiper-item-container">
-      <div v-for="(item,index) in 3" :key="item" :id="forId(index)" class="swiper-item " >
-        {{ item }}
-      </div>
+  <div class="swiper">
+    <div class="swiperContainer">
+      <div :style="transLength[index]"  v-for="(item, index) in 4" :key="index"  class="swiperItem">{{item}}</div>
     </div>
-    <div class="indexContainer">
-      <label v-for="(item,index) in 3" :for="forId(index)"  :key="item" :class="{'active':curIndex==index}" @click="indexExchange(index)"></label>
+    <div class="dotContainer">
+      <div  v-for="(item, index) in 4" :key="index"  class="dot" :class="{'active':curIndex==index}" @click="indexExchange(index)"></div>
     </div>
   </div>
 </template>
@@ -18,81 +16,110 @@ export default {
       type: Boolean,
       default: true,
     },
+
   },
   data() {
     return {
       curIndex: 0,
+      transLength:[
+      {
+         left:`-676px`,
+         transition: 'ease 2s',
+      },
+      {
+         left:`30px`,
+         transition: 'ease 2s',
+      },{
+         left:`734px`,
+         transition: 'ease 2s',
+      },{
+         left:`1438px`,
+         transition: 'ease 2s',
+      },{
+        left:`2142px`,
+         transition: 'ease 2s',
+      }]
     };
   },
   mounted() {
-    // if (this.loop) {
-    //   setInterval(() => {}, 1000);
+    console.log(this.loop)
+    // if(this.loop){
+    //   setInterval(()=>{
+    //     this.curIndex=(this.curIndex+1)%4
+    //     this.indexExchange(this.curIndex)
+    //   },2000)
     // }
   },
- 
-
 
   methods: {
-    indexExchange(index){
-      // 改变当前的curIndex
-     this.curIndex=index
-    //  
-
+    indexExchange(index) {
+      this.curIndex = index;
+     
+    
+      this.transLength.forEach((item,idx) => {
+          this.transLength[idx]=this.transLength[idx-1]
+     
+      });
+    
+      //
     },
-    forId(index){
-      return "forId_"+index
-    }
   },
 };
 </script>
 
 <style >
-.swiperContainer {
-  width: 375px;
-  height: 112px;
-  background-color: black;
+.swiper {
+  width: 750px;
+  height: 250px;
+  position: relative;
   overflow: hidden;
   display: flex;
-  position: relative;
+  align-content: center;
 }
-.swiperContainer .swiper-item {
+.swiperContainer{
+  overflow: hidden;
+  display: flex;
+
+}
+.swiperItem {
+  position: absolute;
   flex-shrink: 0;
-  margin: 0 8px;
-  width: 345px;
-  height: 112px;
+  background-color: khaki;
+  width: 690px;
+  height: 224px;
   border-radius: 10px;
   box-shadow: 0px 2px 6px 0px rgba(136, 127, 213, 100);
-  background-color: ivory;
+  margin: 0 14px 0 0;
+ 
 }
-.indexContainer {
+.dotContainer {
   position: absolute;
   left: 50%;
+  bottom: 48px;
   transform: translateX(-50%);
-  bottom: 20px;
-  display: flex;
-  align-items: center;
+   display: flex;
+   align-items: center;
 }
-.indexContainer label {
-  margin: 6px;
-  width: 15px;
-  height: 4px;
-  line-height: 20px;
-  border-radius: 10px;
+.dot {
+  width: 30px;
+  height: 8px;
+  line-height: 40px;
+  border-radius: 20px;
   background-color: rgba(200, 200, 200, 100);
   text-align: center;
+  margin:0 12px ;
+ 
 }
-.indexContainer label.active {
-  width: 39px;
-  height: 7px;
-  line-height: 20px;
-  border-radius: 10px;
-  background-color: rgba(136, 127, 213, 100);
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 100);
+.active{
+ width: 78px;
+ height: 14px;
+ line-height: 20px;
+ border-radius: 10px;
+ background-color: rgba(136, 127, 213, 100);
+ text-align: center;
+ border: 1px solid rgba(255, 255, 255, 100);
+ transition: ease .2s;
 }
-/* @keyframes loops {
-  0% {
-    left: 0px;
-  }
-} */
+
+
 </style>

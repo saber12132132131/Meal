@@ -10,6 +10,9 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "element-ui": "^2.14.1",
+    "lib-flexible": "^0.3.2",
+    "postcss-px2rem-exclude": "0.0.6",
+    "px2rem-loader": "^0.1.9",
     "vue": "^2.6.11"
   },
   "devDependencies": {
