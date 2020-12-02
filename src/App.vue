@@ -6,7 +6,7 @@
 
 <script>
 
-import Home from './components/MealHome'
+import Home from './pages/MealHome'
 export default {
   name: 'App',
   components: {

@@ -42,6 +42,7 @@ export default {
     };
   },
   mounted() {
+    this.arr=this.transLength
     console.log(this.loop)
     // if(this.loop){
     //   setInterval(()=>{
@@ -55,7 +56,7 @@ export default {
     indexExchange(index) {
       this.curIndex = index;
      
-    
+      
       this.transLength.forEach((item,idx) => {
           this.transLength[idx]=this.transLength[idx-1]
      
