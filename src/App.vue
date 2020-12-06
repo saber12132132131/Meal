@@ -7,6 +7,7 @@
 <script>
 
 import Home from './pages/MealHome'
+
 export default {
   name: 'App',
   components: {
