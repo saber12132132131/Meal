@@ -1,24 +1,25 @@
 <template>
   <div id="app">
-    <Home/>
+    <Home />
+    <Navigation />
   </div>
 </template>
 
 <script>
-
-import Home from './pages/MealHome'
-
+import Home from "./pages/MealHome";
+import Navigation from "./components/Navigation";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-   Home
-  }
-}
+    Home,
+    Navigation,
+  },
+};
 </script>
 
 <style>
-   *{
-     margin: 0;
-     padding: 0;
-   }
+* {
+  margin: 0;
+  padding: 0;
+}
 </style>
