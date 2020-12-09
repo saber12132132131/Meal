@@ -3,7 +3,6 @@
     <keep-alive>
       <router-view></router-view>
    </keep-alive>
-    
     <Navigation />
   </div>
 </template>
@@ -14,12 +13,10 @@ import Navigation from "./components/Navigation";
 export default {
   name: "App",
   components: {
-    // Home,
     Navigation,
   },
 };
 </script>
-
 <style>
 * {
   margin: 0;
