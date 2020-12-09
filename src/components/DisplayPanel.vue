@@ -1,5 +1,5 @@
 <template>
-  <div class="displayPanel">
+  <div  class="displayPanel">
     <div class="tapContainer">
       <div class="tap">
         <div
@@ -17,7 +17,6 @@
       <div
         v-for="(item, indexs) in tags"
         :key="item.des"
-        
         @click="getTagIndex(indexs)"
         class="tagItem"
       >
@@ -26,13 +25,24 @@
       </div>
     </div>
     <div class="main">
-      
+         <MealItem />
+         <MealItem />
+         <MealItem />
+         <MealItem />
+         <MealItem />
+         <MealItem />
     </div>
   </div>
 </template>
 
 <script>
+
+import MealItem from './mealItem';
+
 export default {
+  components:{
+    MealItem 
+  },
   props: {
     taps: {
       type: Array,
@@ -49,9 +59,7 @@ export default {
       curTagIndex: 0,
     };
   },
-  mounted() {
-    console.log(this.props);
-  },
+ 
   methods: {
     getTapIndex(index) {
       this.curTapIndex = index;
@@ -64,6 +72,7 @@ export default {
 </script>
 
 <style>
+
 .activeTap::before {
   position: absolute;
   bottom: 40px;
@@ -131,14 +140,7 @@ export default {
   margin-right: 10px;
 
 }
-@keyframes toLeft {
-  0% {
-    transform: translateX(200px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
+
 @keyframes bonus {
   0% {
     transform: scale(1);

@@ -41,6 +41,7 @@ export default {
   border: 2px solid rgba(234, 231, 253, 100);
   display: flex;
   justify-content: space-around;
+  background-color: white;
 }
 .image {
   height: 100%;

@@ -41,6 +41,7 @@ export default {
     Tip,
     DisplayPanel
   },
+  
   data() {
     return {
       items: [1,2,3,4,5,6,7,8,9],
@@ -171,6 +172,7 @@ export default {
   height: 100%;
 }
 .sortItem .circle{
+
   height: 100px;
   width: 100px;
   border-radius: 50%;
