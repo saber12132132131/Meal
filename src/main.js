@@ -4,10 +4,10 @@ import App from './App.vue'
 import router from './routers/router'
 // import 'element-ui/lib/theme-chalk/index.css';
 import './assets/iconfont.css';
-import 'animate.css'
+// import 'animate.css'
 // import 'lib-flexible'
 import './plugins/rem.js'
-Vue.use(ElementUI);
+// Vue.use(ElementUI);
 Vue.config.devtools = false;
 Vue.config.productionTip = false
 new Vue({

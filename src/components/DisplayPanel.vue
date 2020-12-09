@@ -2,26 +2,30 @@
   <div class="displayPanel">
     <div class="tapContainer">
       <div class="tap">
-        <div v-for="(item,index) in taps" :key="item.des" class="tapitem" :class="{activeTap:curTapIndex==index}" @click="getTapIndex(index)">{{ item.des }}</div>
+        <div
+          v-for="(item, index) in taps"
+          :key="item.des"
+          class="tapitem"
+          :class="{activeTap: curTapIndex == index }"
+          @click="getTapIndex(index)"
+        >
+          {{ item.des }}
+        </div>
       </div>
     </div>
     <div class="tagContainer">
-      <div v-for="(item,index) in tags" :key="item.des"  :class="{activeTag:curTagIndex==index}" @click="getTagIndex(index)" class="tagItem">
-        <span class="animate__repeat-3 animate__bounceIn" >{{item.des}}</span>
-        <span class="iconfont icon-arrow-down"></span>
+      <div
+        v-for="(item, indexs) in tags"
+        :key="item.des"
+        
+        @click="getTagIndex(indexs)"
+        class="tagItem"
+      >
+        <span :class="{activeTag: curTagIndex == indexs }">{{ item.des }}</span>
+        <span class="iconfont" :class="curTagIndex == indexs?'icon-arrow-down':'icon-arrow-right'"></span>
       </div>
-      <div class="tagItem">
-        <span class="animate__repeat-3 animate__bounceIn">离我距离</span>
-        <span class="iconfont icon-arrow-down"></span>
-      </div>
-      <div class="tagItem">
-        <span class="animate__repeat-3 animate__bounceIn">食用餐段</span>
-        <span class="iconfont icon-arrow-down"></span>
-      </div>
-      <div class="tagItem">
-        <span class="animate__repeat-3 animate__bounceIn">套餐数量</span>
-        <span class="iconfont icon-arrow-down"></span>
-      </div>
+    </div>
+    <div class="main">
       
     </div>
   </div>
@@ -34,45 +38,44 @@ export default {
       type: Array,
       default: null,
     },
-    tags:{
+    tags: {
       type: Array,
       default: null,
-    }
+    },
   },
   data() {
-      return {
-          curTapIndex: 0
-      }
+    return {
+      curTapIndex: 0,
+      curTagIndex: 0,
+    };
   },
   mounted() {
     console.log(this.props);
   },
   methods: {
-      getTapIndex(index) {
-          this.curTapIndex=index
-      },
-      getTagIndex(index) {
-          this.curTapIndex=index
-      }
+    getTapIndex(index) {
+      this.curTapIndex = index;
+    },
+    getTagIndex(index) {
+      this.curTagIndex = index;
+    },
   },
 };
 </script>
 
 <style>
-.activeTap::before{
+.activeTap::before {
   position: absolute;
   bottom: 40px;
   left: 0px;
   content: "";
   height: 10px;
   width: 100%;
- background-color: orange;
- opacity: 0.5;
- z-index: -1;
+  background-color: orange;
+  opacity: 0.5;
+  z-index: -1;
 }
-.activeTag{
-  color: orange;
-}
+
 .displayPanel {
   width: 750px;
   height: fit-content;
@@ -90,7 +93,6 @@ export default {
   display: none; /* Chrome Safari */
 }
 .tap {
- 
   width: 690px;
   height: 72px;
   display: flex;
@@ -114,18 +116,19 @@ export default {
 }
 .tagContainer .tagItem {
   height: 40px;
-  margin-right:30px ;
-  
+  margin-right: 30px;
+}
+.tagItem span.activeTag {
+  color: orange ;
 }
 .tagItem span {
   color: rgba(0, 0, 0, 1);
   font-size: 24px;
   text-align: left;
   font-family: SourceHanSansSC-regular;
-
 }
-.tagItem span:nth-child(1){
-    margin-right: 10px;
+.tagItem span:nth-child(1) {
+  margin-right: 10px;
 
 }
 @keyframes toLeft {
@@ -149,7 +152,7 @@ export default {
   75% {
     transform: scale(1.25);
   }
-  100%{
+  100% {
     transform: scale(1);
   }
 }

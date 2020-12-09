@@ -20,7 +20,7 @@
     <!-- 提示 -->
     <Tip/>
     <!-- 展示板 -->
-    <DisplayPanel :taps='taps' :tags="tags/>
+    <DisplayPanel :taps='taps' :tags="tags" />
   </div>
 </div>
  
