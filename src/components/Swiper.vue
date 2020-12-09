@@ -67,7 +67,7 @@ export default {
       }, 4000);
     },
     beforeEnter() {
-      console.log("asdas");
+      
     },
   },
 };
