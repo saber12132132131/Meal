@@ -1,17 +1,30 @@
+import Vue from 'vue'
 import Router from "vue-router";
+import Home from "../pages/MealHome.vue"
+import order from "../pages/order.vue"
+import profile from "../pages/profile.vue"
+import Welfare from "../pages/Welfare.vue"
+// 安装插件
+Vue.use(Router);
+const routes = [
+    {
+        path: '/',
+        redirect: '/home'
+    },
+    {
+        path: '/home',
+        component: Home
+    }, {
+        path: '/order',
+        component: order
+    }, {
+        path: '/profile',
+        component: profile
+    }, {
+        path: '/Welfare',
+        component: Welfare
+    },]
 export default new Router({
-    routers: [{
-      path: "router",
-      component: '',
-      meta: {},
-      children: [{
-          path: 'router1',
-          component: Router1
-        },
-        {
-          path: 'router2',
-          component: Router2
-        }
-      ]
-    }]
-  })
+    mode: 'history',
+    routes
+})

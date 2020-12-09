@@ -6,6 +6,41 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "4933144",
+      "name": "加号",
+      "font_class": "jiahao",
+      "unicode": "e6c3",
+      "unicode_decimal": 59075
+    },
+    {
+      "icon_id": "5206117",
+      "name": "订单",
+      "font_class": "icon",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "6997493",
+      "name": "我 的",
+      "font_class": "wodedangxuan",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "13109052",
+      "name": "团餐选中",
+      "font_class": "tuancanxuanzhong",
+      "unicode": "e784",
+      "unicode_decimal": 59268
+    },
+    {
+      "icon_id": "17456837",
+      "name": "福利",
+      "font_class": "fuli",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
       "icon_id": "584025",
       "name": "定位",
       "font_class": "dingwei",

@@ -1,25 +1,31 @@
 <template>
   <div class="navBar">
-     <div class="navItem">
-         <div></div>
-     </div>
-     <div class="navItem">
-
-     </div>
-     <div class="navItem">
-
-     </div>
-     <div class="navItem">
-
-     </div>
+      <navItem path="/home" >
+        <span class="iconfont icon-tuancanxuanzhong" slot="image"></span>
+        <div slot="des">团餐</div>
+      </navItem>
+    <navItem path="/Welfare" >
+      <span class="iconfont icon-icon" slot="image"></span>
+      <div slot="des">福利餐</div>
+    </navItem>
+    <navItem path="/order">
+      <span class="iconfont icon-fuli" slot="image"></span>
+      <div slot="des">订单</div>
+    </navItem>
+    <navItem path="/profile">
+      <span class="iconfont icon-wodedangxuan" slot="image"></span>
+      <div slot="des">我的</div>
+    </navItem>
   </div>
 </template>
 
 <script>
+import navItem from "./navItem";
 export default {
-    props:{
-
-    }
+  components: {
+    navItem,
+  },
+  props: {},
 };
 </script>
  
@@ -36,9 +42,11 @@ export default {
   display: flex;
   justify-content: space-around;
 }
-.navItem{
-    width: 160px;
-    height: 100%;
-    background-color: aquamarine;
+.image {
+  height: 100%;
+  width: 100%;
 }
+/* .navItem {
+
+} */
 </style>
