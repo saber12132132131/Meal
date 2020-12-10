@@ -23,7 +23,7 @@ export default {
   padding: 0;
 }
 #app {
-  padding-bottom: 1000px;
+  padding-bottom: 110px;
 }
 a {
   text-decoration: none;
@@ -99,16 +99,16 @@ a:active {
   width: 750px;
 }
 .marginRight10 {
-  margin-left: 10px !important;
+  margin-Right: 10px !important;
 }
 .marginRight20 {
-  margin-left: 20px !important;
+  margin-Right: 20px !important;
 }
 .marginRight30 {
-  margin-left: 30px !important;
+  margin-Right: 30px !important;
 }
 .marginRight40 {
-  margin-left: 40px !important;
+  margin-Right: 40px !important;
 }
 .marginLeft10 {
   margin-left: 10px !important;

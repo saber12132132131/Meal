@@ -157,7 +157,8 @@ export default {
  display: flex;
 }
 .main .sortItem_container{
-  padding: 30px;
+  padding:0  30px 40px;
+ 
  height: 180px;
  width: 690px;
 

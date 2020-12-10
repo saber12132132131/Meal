@@ -3,11 +3,14 @@
  * @param {*} el 原生DOM元素
  */
 const isElementNotInViewport = function(el) {
-    let rect = el.getBoundingClientRect();
-    return (
-      rect.top >= (window.innerHeight || document.documentElement.clientHeight) ||
-      rect.bottom <= 0
-    );
+     if(el){
+      let rect = el.getBoundingClientRect();
+      return (
+        rect.top >= (window.innerHeight || document.documentElement.clientHeight) ||
+        rect.bottom <= 0
+      );
+     }
+    
   };
   
   export { isElementNotInViewport};

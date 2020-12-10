@@ -4,8 +4,22 @@
       <img src="" class="img " :class="{goRight:hasGoRight}" slot="left" alt="" srcset="" />
       <div class="flexColArd cover marginLeft30 " :class="{goLeft:hasGoLeft}" slot="right">
         <div class="title font18">营养均衡</div>
-        <div class="serviceCount font12 gray">共服务 185,569 次</div>
+        <div class="serviceCount font12 gray">
+          <div class="flexBew">
+            <div>共服务 185,569 次</div>
+            <el-tag
+             effect="dark"
+            class="font14 marginRight40"
+            >企业团餐</el-tag>
+          </div>
+        </div>
         <div class="tag font12 lightBlue">起订份20份</div>
+        <div class="cover flexBew">
+          <el-tag
+           type="warning"
+          effect="light"
+          >asdas</el-tag>
+        </div>
       </div>
     </item>
      <item :leftFlex="1.78" class="itemx2 paddingBot10 hidden">

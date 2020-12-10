@@ -140,7 +140,9 @@ export default {
   margin-right: 10px;
 
 }
-
+.main{
+  padding-bottom: 50px;
+}
 @keyframes bonus {
   0% {
     transform: scale(1);
