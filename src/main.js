@@ -8,7 +8,7 @@ import './assets/iconfont.css';
 // import 'lib-flexible'
 import './plugins/rem.js'
 Vue.use(ElementUI);
-Vue.config.devtools = false;
+// Vue.config.devtools = true
 Vue.config.productionTip = false
 new Vue({
   router,

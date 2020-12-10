@@ -24,6 +24,7 @@ export default {
 }
 #app {
   padding-bottom: 110px;
+  width: 750px;
 }
 a {
   text-decoration: none;

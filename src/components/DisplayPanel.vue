@@ -1,12 +1,12 @@
 <template>
-  <div  class="displayPanel">
+  <div class="displayPanel">
     <div class="tapContainer">
       <div class="tap">
         <div
           v-for="(item, index) in taps"
           :key="item.des"
           class="tapitem"
-          :class="{activeTap: curTapIndex == index }"
+          :class="{ activeTap: curTapIndex == index }"
           @click="getTapIndex(index)"
         >
           {{ item.des }}
@@ -20,28 +20,53 @@
         @click="getTagIndex(indexs)"
         class="tagItem"
       >
-        <span :class="{activeTag: curTagIndex == indexs }">{{ item.des }}</span>
-        <span class="iconfont" :class="curTagIndex == indexs?'icon-arrow-down':'icon-arrow-right'"></span>
+        <span :class="{ activeTag: curTagIndex == indexs }">{{ item.des }}</span>
+        <span
+          class="iconfont"
+          :class="curTagIndex == indexs ? 'icon-arrow-down' : 'icon-arrow-right'"
+        ></span>
       </div>
     </div>
     <div class="main">
-         <MealItem />
-         <MealItem />
-         <MealItem />
-         <MealItem />
-         <MealItem />
-         <MealItem />
+      <div v-if="curTapIndex == 0" class="first">
+        <MealItem />
+     
+      </div>
+      <div v-else-if="curTapIndex == 1" class="second">
+        <MealItem />
+        <MealItem />
+       
+      </div>
+      <div v-else-if="curTapIndex == 2" class="third">
+        <MealItem />
+        <MealItem />
+        <MealItem />
+ 
+      </div>
+      <div v-else-if="curTapIndex == 3" class="fourth">
+        <MealItem />
+        <MealItem />
+        <MealItem />
+        <MealItem />
+      </div>
+      <div v-else class="fifth">
+        <MealItem />
+        <MealItem />
+        <MealItem />
+        <MealItem />
+        <MealItem />
+
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-
-import MealItem from './mealItem';
+import MealItem from "./mealItem";
 
 export default {
-  components:{
-    MealItem 
+  components: {
+    MealItem,
   },
   props: {
     taps: {
@@ -59,7 +84,7 @@ export default {
       curTagIndex: 0,
     };
   },
- 
+
   methods: {
     getTapIndex(index) {
       this.curTapIndex = index;
@@ -72,7 +97,6 @@ export default {
 </script>
 
 <style>
-
 .activeTap::before {
   position: absolute;
   bottom: 40px;
@@ -128,7 +152,7 @@ export default {
   margin-right: 30px;
 }
 .tagItem span.activeTag {
-  color: orange ;
+  color: orange;
 }
 .tagItem span {
   color: rgba(0, 0, 0, 1);
@@ -138,9 +162,8 @@ export default {
 }
 .tagItem span:nth-child(1) {
   margin-right: 10px;
-
 }
-.main{
+.main {
   padding-bottom: 50px;
 }
 @keyframes bonus {

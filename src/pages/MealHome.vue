@@ -10,7 +10,7 @@
   <div class="main">
     <!-- 分类条目 -->
       <div class="sortItem_container">
-         <div v-for="item in sortItems" :key="item.imgUrl" class="sortItem">
+         <div v-for="item in sortItems" :key="item.imgUrl"  @click="gotoChef(item)" class="sortItem">
             <div class="circle">
               <img src="" alt="" srcset="">
             </div>
@@ -74,17 +74,21 @@ export default {
       ],
       sortItems:[{
         imgUrl:"1",
-        des:"金牌厨师"
+        des:"金牌厨师",
+        path:"chef"
       },
       {
         imgUrl:"2",
-        des:"半成品菜"
+        des:"半成品菜",
+        path:"chef"
       },{
         imgUrl:"3",
-        des:"生鲜水果"
+        des:"生鲜水果",
+        path:"chef"
       },{
         imgUrl:"4",
-        des:"活动配餐"
+        des:"活动配餐",
+        path:"chef"
       }],
       curIndex: 0,
       taps:[{
@@ -108,6 +112,11 @@ export default {
         des:'套餐数量'
       }]
     };
+  },
+  methods: {
+    gotoChef(){
+      this.$router.push({path:'/home/chef'});
+    }
   },
 };
 </script>
