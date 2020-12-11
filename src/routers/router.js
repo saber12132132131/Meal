@@ -15,10 +15,7 @@ const routes = [
     {
         path: '/home',
         component: Home,
-        children:[{
-           path:'chef',
-           components:GoldChef
-        }]
+        children:[]
     }, {
         path: '/order',
         component: order
@@ -28,7 +25,10 @@ const routes = [
     }, {
         path: '/Welfare',
         component: Welfare
-    },]
+    },{
+        path:'/chef',
+        component:GoldChef
+     }]
 export default new Router({
     mode: 'history',
     routes

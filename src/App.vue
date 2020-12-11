@@ -40,6 +40,10 @@ a:active {
   height: 100%;
   width: 100%;
 }
+.flexAlignCenter{
+    display: flex;
+    align-items: center;
+}
 .flexCenter {
   display: flex;
   justify-content: center;
@@ -160,16 +164,16 @@ a:active {
   margin: 40px !important;
 }
 .paddingRight10 {
-  padding-left: 10px !important;
+  padding-Right: 10px !important;
 }
 .paddingRight20 {
-  padding-left: 20px !important;
+  padding-Right: 20px !important;
 }
 .paddingRight30 {
-  padding-left: 30px !important;
+  padding-Right: 30px !important;
 }
 .paddingRight40 {
-  padding-left: 40px !important;
+  padding-Right: 40px !important;
 }
 .paddingLeft10 {
   padding-left: 10px !important;

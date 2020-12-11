@@ -115,7 +115,7 @@ export default {
   },
   methods: {
     gotoChef(){
-      this.$router.push({path:'/home/chef'});
+      this.$router.push({path:'/chef'});
     }
   },
 };
