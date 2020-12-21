@@ -46,6 +46,43 @@
         </div>
       </div>
     </div>
+    <div class="goDir">
+      <div>1</div>
+      <div>
+        <div class="font18 marginTop30">社区入驻</div>
+        <div>认证完成后方可在本社区订餐中受益</div>
+      </div>
+      <div>3</div>
+    </div>
+    <div class="tools">
+      <div class="title">服务工具</div>
+      <div class="warp">
+        <div class="con">
+          <div></div>
+          <div>客服中心</div>
+        </div>
+        <div class="con">
+          <div></div>
+          <div>客服中心</div>
+        </div>
+        <div class="con">
+          <div></div>
+          <div>客服中心</div>
+        </div>
+        <div class="con">
+          <div></div>
+          <div>客服中心</div>
+        </div>
+        <div class="con">
+          <div></div>
+          <div>客服中心</div>
+        </div>
+        <div class="con">
+          <div></div>
+          <div>客服中心</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -54,6 +91,90 @@ export default {};
 </script>
 
 <style lang="postcss" scoped>
+.tools {
+  width: 690px;
+  height: 416px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 12px 0px rgba(214, 210, 242, 100);
+  border: 1px solid rgba(255, 0, 0, 0);
+  margin: 60px auto;
+}
+.tools .warp {
+  height: 80%;
+  width: 100%;
+  /* background-color: wheat; */
+  display: flex;
+  padding-left: 15px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.tools .title {
+  height: auto;
+  font-size: 32px;
+  text-align: left;
+  margin: 30px;
+  width: fit-content;
+
+  font-family: PingFangSC-regular;
+  position: relative;
+}
+.con {
+  height: 150px;
+  width: 140px;
+  /* background-color: yellow; */
+  margin: 0 12px;
+}
+.con div:nth-child(1) {
+  height: 50px;
+  width: 50px;
+  background-color: wheat;
+  margin: 30px auto;
+}
+.con div:nth-child(2) {
+
+
+  margin: 30px auto;
+  color: rgba(16, 16, 16, 100);
+  font-size: 24px;
+}
+.tools .title::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  border-radius: 5px;
+  width: 100%;
+  background-color: orange;
+}
+.goDir {
+  width: 690px;
+  height: 136px;
+  line-height: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 12px 0px rgba(214, 210, 242, 100);
+  border: 2px solid rgba(255, 0, 0, 0);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+.goDir div:nth-child(1) {
+  flex: 1.5;
+}
+.goDir div:nth-child(2) {
+  flex: 7;
+  height: 100%;
+  overflow: hidden;
+  text-align: left;
+}
+
+.goDir div:nth-child(3) {
+  flex: 1.5;
+}
 .top {
   width: 750px;
   height: 456px;
@@ -82,7 +203,7 @@ export default {};
   font-family: PingFangSC-regular;
   position: relative;
 }
-.banner .title::after{
+.banner .title::after {
   content: "";
   z-index: -1;
   position: absolute;
@@ -93,9 +214,9 @@ export default {};
   width: 100%;
   background-color: orange;
 }
-.banner .top .img {
-  width: 180px;
-  height: 180px;
+ .img {
+  width: 180px !important;
+  height: 180px !important;
   background-color: rgba(255, 255, 255, 100);
   box-shadow: 0px 2px 6px 0px rgba(216, 30, 6, 100);
   position: absolute;
@@ -126,7 +247,7 @@ export default {};
   text-align: left;
   font-family: PingFangSC-bold;
 }
-.banner .warp  .warpCon{
+.banner .warp .warpCon {
   height: 100%;
   display: flex;
   align-items: center;
