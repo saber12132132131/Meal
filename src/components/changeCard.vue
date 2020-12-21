@@ -46,6 +46,7 @@ export default {
   background-color: rgb(240, 240, 240);
   height: fit-content;
   display: block;
+
 }
 .changeCard .left .changeBtn{
   width: 100%;
