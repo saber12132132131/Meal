@@ -1,7 +1,9 @@
 <template>
-  <item :leftFlex="2.3" class="chefItem cover">
-    <div class="left cover" slot="left">
-      <img src="" class="chefImg" alt="" srcset="" />
+  <item :leftFlex="3.5" class="chefItem ">
+    <div class="left cover " slot="left">
+      <img src="https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2273297271,1530917507&fm=26&gp=0.jpg" class="chefImg" alt="" srcset="" />
+      <div class="star">sdf</div>
+      <div class="score font14 ">4.8</div>
     </div>
     <div class="right cover" slot="right">dsda</div>
   </item>
@@ -15,13 +17,20 @@ export default {
   },
 };
 </script>
-
 <style>
 .chefItem {
   height: 294px;
-  width: 100%;
+  width: 528px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 2px 6px 0px rgba(155, 155, 155, 40);
 }
 .chefItem .left {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   height: 100%;
 }
 .chefItem .left .chefImg {
