@@ -20,7 +20,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss" scoped>
 .navItem {
   display: block;
   width: 160px;

@@ -41,7 +41,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss" scoped>
 .changeCard .left {
   background-color: rgb(240, 240, 240);
   height: fit-content;

@@ -96,7 +96,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss" scoped>
 .activeTap::before {
   position: absolute;
   bottom: 40px;

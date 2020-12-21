@@ -93,7 +93,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss" scoped>
 .mealItem {
   margin: 30px auto 0;
   width: 690px;

@@ -16,7 +16,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss" scoped>
 .chefItem {
   height: 294px;
   width: 100%;

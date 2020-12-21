@@ -120,8 +120,7 @@ export default {
   },
 };
 </script>
-
-<style >
+<style lang="postcss" scoped>
 .top {
   width: 750px;
   height: 400px;

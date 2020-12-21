@@ -9,7 +9,7 @@
 export default {};
 </script>
 
-<style>
+<style lang="postcss" scoped>
 .tip {
   margin: 0 30px 30px;
   height: 76px;

@@ -20,7 +20,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss" scoped>
 .searchBar {
   width: 750px;
   display: flex;

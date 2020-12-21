@@ -73,7 +73,7 @@ export default {
 };
 </script>
 
-<style >
+<style lang="postcss" scoped >
 .swiper {
   width: 750px;
   height: 250px;
@@ -83,9 +83,12 @@ export default {
   align-content: center;
 }
 .swiperContainer {
+  width: 750px;
+  height: 250px;
   overflow: hidden;
   display: flex;
   position: relative;
+  justify-content: center;
 }
 .swiperItem {
   position: absolute;

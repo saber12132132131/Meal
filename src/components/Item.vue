@@ -44,7 +44,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="postcss" scoped>
   .item{
       position: relative;
       display: flex;

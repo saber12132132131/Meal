@@ -29,7 +29,7 @@ export default {
 };
 </script>
     
-<style>
+<style lang="postcss" scoped>
 .header {
   height: 80px;
   width: 750px;

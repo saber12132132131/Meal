@@ -29,7 +29,7 @@ export default {
 };
 </script>
  
-<style>
+<style lang="postcss" scoped>
 .navBar {
   position: fixed;
   bottom: 0;
